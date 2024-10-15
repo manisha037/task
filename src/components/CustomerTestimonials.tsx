@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import logo from "../public/assets/image 367.png"
 
 const testimonials = [
   {
@@ -50,9 +51,9 @@ const CustomerTestimonials = () => {
   }, [isHovered])
 
   return (
-    <section className="bg-indigo-50 py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-10 text-center">What Our Customers Say</h2>
+    <section className="bg-[#F4F1FF] py-20 w-[95%] mx-auto rounded-[32px]">
+      <div className="container mx-auto ">
+        <h2 className="text-[36px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
              onMouseEnter={() => setIsHovered(true)}
              onMouseLeave={() => setIsHovered(false)}>
@@ -69,20 +70,25 @@ const CustomerTestimonials = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="flex-shrink-0 w-full px-4">
-                  <div className="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-                    <p className="text-gray-600 mb-4 text-lg">
+                  <div className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 max-w-2xl mx-auto">
+                    <p className="text-[#1B2559] mb-4 text-[22px] leading-[28px]">
                       "{testimonial.text}"
                     </p>
-                    <div className="flex items-center">
+                   
+                    <hr className="bg-[#4318FF] border-0 m-0" style={{ height: '0.61px' }} />
+<div className='flex justify-between'>
+                    <div className="flex items-center gap-4">
                       <img
                         src={`https://i.pravatar.cc/40?img=${index + 1}`}
                         alt={testimonial.name}
-                        className="rounded-full mr-3"
+                        className="rounded-full w-[66px] h-[66px]"
                       />
                       <div>
-                        <p className="font-semibold">{testimonial.name}</p>
-                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                        <p className="text-[19px] text-[#1B2559] font-geologica ">{testimonial.name}</p>
+                        <p className=" font-geologica text-[19px] font-thin text-[#1B2559]">{testimonial.role}</p>
                       </div>
+                    </div>
+                    <img src={logo} width={56} height={56} alt="" />
                     </div>
                   </div>
                 </div>

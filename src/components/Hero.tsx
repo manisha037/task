@@ -1,45 +1,47 @@
-import React from 'react'
-import { MessageSquare, TrendingUp } from 'lucide-react'
 
+import customer from "../public/assets/Group 2299.png";
+import revenue from "../public/assets/Frame 2302.png";
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 const Hero = () => {
   return (
-    <section className="bg-[#FFF8F6] py-20">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-wrap items-center">
-          <div className="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pl-12">
-            <div className="max-w-lg">
-              <h2 className="text-2xl font-medium text-[#1E293B] mb-2">Convert</h2>
-              <h1 className="text-5xl font-bold text-[#1E293B] mb-2 flex items-center">
-                Customer Feedback <MessageSquare className="ml-2 text-[#6366F1]" size={40} />
-              </h1>
-              <h2 className="text-2xl font-medium text-[#1E293B] mb-2">Into</h2>
-              <h1 className="text-5xl font-bold text-[#1E293B] mb-6 flex items-center">
-                Revenue Growth <TrendingUp className="ml-2 text-[#6366F1]" size={40} />
-              </h1>
-              <p className="text-lg font-medium text-[#6366F1] mb-4">
+    <section className="bg-gradient-to-r from-[#FFF7EE] to-[#4318FF08] w-[95%] mx-auto py-20 rounded-[32px]">
+      <div className="w-[95%] mx-auto">
+        <div className="flex ">
+          <div className="w-full lg:w-[60%] mb-10 lg:mb-0 h-[70vh] ">
+            <div className="flex flex-col">
+              <h2 className="font-ethin font-geologica text-[45px] text-[#1B2559] leading-[104.98px] ">Convert</h2>
+              <div className='flex items-center gap-4'>
+               <h1 className="whitespace-nowrap font-[400] text-[#1B2559] text-[70px] leading-[104.98px] font-geologica flex items-center"> Customer Feedback</h1> <img src={customer} className='-mt-11' alt="customer" width={95} height={78} />
+              </div>
+              <h2 className="font-ethin font-geologica text-[45px] text-[#1B2559] leading-[104.98px] ">Into</h2>
+              <div className='flex items-center gap-3 ' >
+               <h1 className="whitespace-nowrap font-[400] text-[#1B2559] text-[70px] leading-[104.98px] font-geologica flex items-center"> Revenue Growth</h1> <img src={revenue} width={74} className='-mt-11' height={84} alt="" />
+              </div>
+              <div className="flex flex-col gap-1">
+              <p className="text-[22px] font-geologica lg:whitespace-nowrap font-[300] text-[#4318FF] ">
                 AI Powered Speech And Text Feedback Analytics Tool
               </p>
-              <p className="text-sm text-[#64748B] mb-8">
+              <p className="text-[18px]  text-[#1B2559] mb-8">
                 Generate insights from feedback data from customer support calls and surveys using natural language
               </p>
-              <a
-                href="#"
-                className="bg-[#6366F1] text-white px-6 py-3 rounded-full hover:bg-indigo-700 inline-flex items-center"
-              >
-                Get Started for Free
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              </div>
+             
             </div>
           </div>
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-[40%] flex flex-col gap-8">
             <div className="bg-white rounded-3xl shadow-lg p-8 aspect-[4/3]">
               {/* Placeholder for the GIF or image */}
               <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
                 <span className="text-gray-500">Sample GIF Placeholder</span>
               </div>
-            </div>
+            </div> 
+            <div
+               
+                className="border-[1.5px] gap-2 border-[#7252FF] justify-center text-[#4318FF] text-center hover:text-[white] font-[500] text-[20px]  px-6 py-3 rounded-full hover:bg-indigo-700 inline-flex items-center"
+              >
+               <p> Get Started for Free</p><ArrowOutwardIcon className="text-[13px]"/>
+               
+              </div>
           </div>
         </div>
       </div>

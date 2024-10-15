@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
-import { MessageSquare, ChevronDown } from 'lucide-react'
+import {  ChevronDown } from 'lucide-react'
+import logo from "../public/assets/Full Logo.png";
+import DropdownMenu from './DropdownMenu';
 
 const menuItems = [
   {
     title: 'Product',
     items: ['Features', 'Integrations', 'Enterprise', 'Solutions']
   },
-  {
-    title: 'Use Cases',
-    items: ['Customer Support', 'Sales', 'Marketing', 'HR']
-  },
+  // {
+  //   title: 'Use Cases',
+  //   items: ['Customer Support', 'Sales', 'Marketing', 'HR']
+  // },
   {
     title: 'Pricing',
     items: ['Plans', 'Comparison', 'Contact Sales', 'Free Trial']
   },
-  {
-    title: 'Resources',
-    items: ['Blog', 'Guides', 'Help Center', 'API Docs']
-  }
+  // {
+  //   title: 'Resources',
+  //   items: ['Blog', 'Guides', 'Help Center', 'API Docs']
+  // }
 ]
 
 const Header = () => {
@@ -35,7 +37,7 @@ const Header = () => {
     const isOpen = openDropdown === index
 
     return (
-      <li className="relative group">
+      <li className=" group">
         <button
           className="flex items-center text-gray-600 hover:text-indigo-600 focus:outline-none"
           onClick={() => handleDropdownToggle(index)}
@@ -43,31 +45,28 @@ const Header = () => {
           {item.title}
           <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
         </button>
-        {isOpen && (
-          <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
-            {item.items.map((subItem, subIndex) => (
-              <li key={subIndex}>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
-                >
-                  {subItem}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
+        {isOpen && <DropdownMenu/>
+          // <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg z-10">
+          //   {item.items.map((subItem, subIndex) => (
+          //     <li key={subIndex}>
+          //       <a
+          //         href="#"
+          //         className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+          //       >
+          //         {subItem}
+          //       </a>
+          //     </li>
+          //   ))}
+          // </ul>
+        }
       </li>
     )
   }
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white ">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <MessageSquare className="text-indigo-600 w-8 h-8 mr-2" />
-          <span className="text-xl font-bold text-indigo-600">prodloop</span>
-        </div>
+       <img src={logo} alt="logo" width={180} height={29} />
         <nav>
           <ul className="flex space-x-6">
             {menuItems.map((item, index) => (
@@ -81,7 +80,7 @@ const Header = () => {
             href="https://calendly.com/raja-prodloop/30min" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
+            className="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700"
           >
             Book a Demo
           </a>

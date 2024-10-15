@@ -1,13 +1,13 @@
-import React from 'react'
+
 import { Play } from 'lucide-react'
 
 const ProductOverview = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-stretch bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="w-full md:w-2/5 p-8 bg-gray-50">
-            <div className="border border-gray-200 rounded-xl p-6">
+          <div className="w-full md:w-2/5 p-8 ">
+            <div className=" rounded-xl ">
               <h2 className="text-2xl font-bold mb-4 text-indigo-900">Product Overview</h2>
               <p className="text-gray-600 mb-6">
                 An easy-to-use platform that helps you collect, analyse and generate insights from feedback data
