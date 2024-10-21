@@ -2,6 +2,7 @@
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import customer from "../public/assets/Group 2299.png";
 import revenue from "../public/assets/Frame 2302.png";
+import video from "../public/assets/WhatsApp Video 2024-10-21 at 14.29.40.mp4";
 
 const MainHero = () => {
   return (
@@ -45,7 +46,10 @@ const MainHero = () => {
             <div className="bg-white rounded-3xl shadow-lg p-8 aspect-[4/3]">
               {/* Placeholder for the GIF or image */}
               <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
-                <span className="text-gray-500">Sample GIF Placeholder</span>
+              <video width={350} height={350} className=' object-cover' autoPlay muted loop>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
               </div>
             </div> 
             <div

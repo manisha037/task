@@ -1,6 +1,5 @@
 
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import { Play } from 'lucide-react'
 
 const Product = () => {
     const arr=Array.from({length:5});
@@ -23,17 +22,10 @@ const Product = () => {
            </div>
         </div>
         <div className="w-full md:w-[68%] h-[634px] relative">
-            <img
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
-              alt="Product Overview"
-              className="w-full h-full object-cover rounded-2xl"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button className="bg-white rounded-full p-4 shadow-lg">
-                <Play className="text-indigo-600 w-8 h-8" />
-              </button>
+        
+        <iframe  className="absolute top-0 left-0 w-full h-full "   src="https://www.youtube.com/embed/IPukuYb9xWw?si=Fcq4SfyT1pBC4wLy" title="YouTube video player" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
-          </div>
+       
     </div>
 
    </section>

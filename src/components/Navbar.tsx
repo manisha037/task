@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   // Function to toggle the dropdown state based on index
-  const toggleDropdown = (index) => {
+  const toggleDropdown = (index :any) => {
  
     setOpenIndex(openIndex === index ? null : index); // Close if the same index is clicked
   };
