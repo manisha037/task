@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import logo from "../public/assets/image 367.png"
 
@@ -35,6 +35,8 @@ const CustomerTestimonials = () => {
   const [isHovered, setIsHovered] = useState(false)
   const testimonialRef = useRef(null)
 
+  const cardsPerView = 3 // Set how many cards to show at once
+
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
   }
@@ -51,9 +53,9 @@ const CustomerTestimonials = () => {
   }, [isHovered])
 
   return (
-    <section className="bg-[#F4F1FF] py-20 w-[95%] mx-auto rounded-[32px]">
-      <div className="container mx-auto ">
-        <h2 className="text-[36px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
+    <section className="bg-[#F4F1FF] py-5 lg:py-20 w-[95%] mx-auto rounded-[32px]">
+      <div className="container mx-auto">
+        <h2 className="lg:text-[36px] text-[18px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
              onMouseEnter={() => setIsHovered(true)}
              onMouseLeave={() => setIsHovered(false)}>
@@ -66,29 +68,28 @@ const CustomerTestimonials = () => {
           <div className="overflow-hidden" ref={testimonialRef}>
             <div 
               className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 w-full px-4">
-                  <div className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 max-w-2xl mx-auto">
-                    <p className="text-[#1B2559] mb-4 text-[22px] leading-[28px]">
+                <div key={index} className="flex-shrink-0 lg:w-[804px] w-[320px] h-[360px] px-1"> {/* Show 3 cards at once */}
+                  <div className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
+                    <p className="text-[#1B2559] h-[200px] text-[16px] lg:text-[22px] leading-[28px]">
                       "{testimonial.text}"
                     </p>
-                   
                     <hr className="bg-[#4318FF] border-0 m-0" style={{ height: '0.61px' }} />
-<div className='flex justify-between'>
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={`https://i.pravatar.cc/40?img=${index + 1}`}
-                        alt={testimonial.name}
-                        className="rounded-full w-[66px] h-[66px]"
-                      />
-                      <div>
-                        <p className="text-[19px] text-[#1B2559] font-geologica ">{testimonial.name}</p>
-                        <p className=" font-geologica text-[19px] font-thin text-[#1B2559]">{testimonial.role}</p>
+                    <div className='flex justify-between'>
+                      <div className="flex items-center gap-4">
+                        <img
+                          src={`https://i.pravatar.cc/40?img=${index + 1}`}
+                          alt={testimonial.name}
+                          className="rounded-full w-[66px] h-[66px]"
+                        />
+                        <div>
+                          <p className="lg:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
+                          <p className="font-geologica lg:text-[19px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
+                        </div>
                       </div>
-                    </div>
-                    <img src={logo} width={56} height={56} alt="" />
+                      <img src={logo} width={56} height={56} alt="" className='hidden lg:flex' />
                     </div>
                   </div>
                 </div>
