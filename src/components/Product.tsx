@@ -1,6 +1,7 @@
 
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { useState } from 'react';
+import WistiaPlayer from './WistiaPlayer';
 
 const Product = () => {
     const arr=Array.from({length:5});
@@ -13,15 +14,13 @@ const Product = () => {
   return (
    <section className='py-20 w-screen '>
     <div className='flex  justify-between w-[95%] mx-auto '>
-        <div className='flex flex-col items-center lg:px-3 border border-[#4318FF] rounded-3xl md:w-[30%] md:h-[634px] w-[90%] mx-auto justify-between md:pt-10 md:pb-8'>
-        <iframe 
-    className="w-full h-[200px]  md:hidden rounded-3xl " 
-    src={`https://www.youtube.com/embed/IPukuYb9xWw?start=${timestamp}&autoplay=1&mute=1` }
-    title="YouTube video player" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerPolicy="strict-origin-when-cross-origin" 
-    allowFullScreen>
-  </iframe>
+        <div className='flex flex-col items-center lg:px-3 border border-[#4318FF] rounded-3xl md:w-[30%] md:h-[450px]  lg:h-[634px] w-[90%] mx-auto justify-between md:pt-5 md:pb-5'>
+        <div 
+    className="w-full h-[350px]  md:hidden rounded-3xl " >
+
+      <WistiaPlayer/>
+   
+  </div>
             <div className="flex flex-col gap-5 pt-4 py-2">
             <h1 className='text-[#1B2559] font-geologica pl-2 font-[500] lg:text-[28px] text-[18px] tracking-wider'>Product Overview</h1>
             <p className='text-[#1B2559] w-[95%] mx-auto text-left lg:text-[20px] text-[14px] tracking-wider leading-[19px] lg:leading-[28px] '>An easy-to-use platform that helps you collect, analyse and generate insights from feedback data</p>
@@ -36,15 +35,19 @@ const Product = () => {
             <ArrowOutwardIcon className=' text-[#4318FF] lg:text-[13px] text-[8px] '/>
            </div>
         </div>
-        <div className=" hidden md:flex md:w-[68%] h-[634px] relative">
-  <iframe 
+        <div className=" hidden md:flex md:w-[68%]  lg:h-[634px] relative">
+  {/* <iframe 
     className="absolute  top-0 left-0 w-full h-full" 
     src={`https://www.youtube.com/embed/IPukuYb9xWw?start=${timestamp}&autoplay=1&mute=1` }
     title="YouTube video player" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerPolicy="strict-origin-when-cross-origin" 
     allowFullScreen>
-  </iframe>
+  </iframe> */}
+  <div className="absolute bg-white grid place-content-center  top-0 left-0 w-full lg:h-[634px] md:h-[450px]" >
+  <WistiaPlayer/>
+  </div>
+  
 </div>
 
 

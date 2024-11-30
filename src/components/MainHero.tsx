@@ -51,12 +51,11 @@ const MainHero = () => {
             <div className="flex items-center gap-2  ">
               <div className="h-[2px] hidden lg:flex w-[80px] bg-[#4318FF]"></div>
               <p className="md:text-[22px] text-[15px] font-geologica font-[300] text-[#4318FF] ">
-                AI Powered Speech And Text Feedback Analytics Tool
+              AI powered Customer Intelligence tool
               </p>
             </div>
             <p className="md:text-[18px] text-[15px] w-[80%]  text-[#1B2559] mb-8 lg:ml-[88px]">
-              Generate insights from feedback data from customer support calls
-              and surveys using natural language
+            Turn thousands of customer service calls into actionable insights <br/> Tailored models for your business taxonomy
             </p>
           </div>
         </div>
