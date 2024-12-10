@@ -1,10 +1,37 @@
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import customer from "../public/assets/Group 2299.png";
 import revenue from "../public/assets/Frame 2302.png";
+import Modal from '@mui/material/Modal';
+import { useState } from "react";
+import Box from '@mui/material/Box';
+import AppReviewsDashboard from "./AppReviewsDashboard";
 
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
+
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 900,
+  height:600,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
 const MainHero = () => {
+
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+
   return (
     <section className="w-[95vw] mx-auto bg-gradient-to-r from-[#FFF7EE] to-[#4318FF08] lg:py-20 py-5 px-1 lg:px-0 rounded-[32px]">
       <div className="lg:flex w-[95%] mx-auto  lg:justify-between lg:flex-row   flex-col">
@@ -84,10 +111,20 @@ const MainHero = () => {
             </p>
           </div>
           
-          <div className="border-[1.5px] gap-2 border-[#7252FF] justify-center text-[#4318FF] text-center hover:text-[white] font-[500] md:text-[20px] text-[14px] py-1 px-6  md:px-6 md:py-3 rounded-full hover:bg-indigo-700 inline-flex items-center">
+          <div onClick={handleOpen} className="border-[1.5px] gap-2 border-[#7252FF] justify-center text-[#4318FF] text-center hover:text-[white] font-[500] md:text-[20px] text-[14px] py-1 px-6  md:px-6 md:py-3 rounded-full hover:bg-indigo-700 inline-flex items-center">
             <p> Get Started for Free</p>
             <ArrowOutwardIcon className="text-[13px]" />
           </div>
+          <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <AppReviewsDashboard/>
+        </Box>
+      </Modal>
         </div>
       </div>
     </section>

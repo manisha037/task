@@ -1,33 +1,44 @@
 import { useState, useEffect, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import logo from "../public/assets/image 367.png"
+import logo from "../public/assets/image 367.png";
+import testimonial from "../public/assets/Testimonial2.jpeg";
+import testimonial1 from "../public/assets/unnamed.png";
+import porter from "../public/assets/porter.jpeg";
+
 
 const testimonials = [
   {
-    text: "The AI summarization by Prodloop does add a lot of value to our user research study.",
-    name: "Antoan Boonstra",
-    role: "Founder, Z-Lead Labs"
+    text1: `Prodloop transformed thousands of customer conversations into quantified product priorities that drive business impact. Their AI eliminated manual call reviews and feedback tagging, saving our team 20+ hours weekly.`,
+    text2:`The automated insights directly shaped our product roadmap, making it a game-changer for both product and CX teams.`,
+    name: "Krishna Mohan Gadi",
+    role: "Head of Product, Design, and User Research at Porter",
+    profile:testimonial1,
+    profile_logo:porter
   },
   {
-    text: "Prodloop has revolutionized how we handle customer feedback. It's an indispensable tool for our team.",
-    name: "Sarah Johnson",
-    role: "CTO, TechInnovate"
-  },
-  {
-    text: "The insights we've gained through Prodloop have directly contributed to our product improvements.",
-    name: "Michael Chang",
-    role: "Product Manager, FutureSoft"
-  },
-  {
-    text: "Prodloop's AI-powered analysis has saved us countless hours in processing customer feedback.",
-    name: "Emily Rodriguez",
-    role: "Customer Success Lead, DataDrive"
-  },
-  {
-    text: "We've seen a significant increase in customer satisfaction since implementing Prodloop's recommendations.",
-    name: "David Nguyen",
-    role: "CEO, CloudSolutions"
+    text1: `The AI summarization by Prodloop does add a lot of value to our user sentiment study.`,
+    text2:`Reply generation and posting is perfect`,
+    name: "Anirban Basumallik",
+    role: "Founder - Z Level Labs",
+    profile:testimonial,
+    profile_logo:logo
+
   }
+  // {
+  //   text: "The insights we've gained through Prodloop have directly contributed to our product improvements.",
+  //   name: "Michael Chang",
+  //   role: "Product Manager, FutureSoft"
+  // },
+  // {
+  //   text: "Prodloop's AI-powered analysis has saved us countless hours in processing customer feedback.",
+  //   name: "Emily Rodriguez",
+  //   role: "Customer Success Lead, DataDrive"
+  // },
+  // {
+  //   text: "We've seen a significant increase in customer satisfaction since implementing Prodloop's recommendations.",
+  //   name: "David Nguyen",
+  //   role: "CEO, CloudSolutions"
+  // }
 ]
 
 const CustomerTestimonials = () => {
@@ -72,15 +83,17 @@ const CustomerTestimonials = () => {
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="flex-shrink-0 lg:w-[804px] w-[320px] h-[360px] px-1"> {/* Show 3 cards at once */}
-                  <div className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
+                  <div  className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
                     <p className="text-[#1B2559] h-[200px] text-[16px] lg:text-[22px] leading-[28px]">
-                      "{testimonial.text}"
+                   {testimonial.text1} <br/>
+                   <br/> {testimonial.text2}
+
                     </p>
                     <hr className="bg-[#4318FF] border-0 m-0" style={{ height: '0.61px' }} />
                     <div className='flex justify-between'>
                       <div className="flex items-center gap-4">
                         <img
-                          src={`https://i.pravatar.cc/40?img=${index + 1}`}
+                          src={testimonial.profile}
                           alt={testimonial.name}
                           className="rounded-full w-[66px] h-[66px]"
                         />
@@ -89,7 +102,7 @@ const CustomerTestimonials = () => {
                           <p className="font-geologica lg:text-[19px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
                         </div>
                       </div>
-                      <img src={logo} width={56} height={56} alt="" className='hidden lg:flex' />
+                      <img src={testimonial.profile_logo} width={90} height={56} alt="" className='hidden lg:flex' />
                     </div>
                   </div>
                 </div>
