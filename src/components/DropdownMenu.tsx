@@ -20,7 +20,7 @@ const Card = ({title,link}:{title:string,link:string}) => {
 const DropdownMenu = () => {
   return (
     <div
-      className="w-[95%] absolute ml-[2.5%]  mx-auto border z-50 h-auto border-t-0 bg-white rounded-b-[32px]"
+      className="w-[95%] mt-[80px] absolute ml-[2.5%]  mx-auto border z-50 h-auto border-t-0 bg-white rounded-b-[32px]"
       style={{
         borderColor:
           'linear-gradient(5.27deg, rgba(67, 24, 255, 0.5) -71.27%, rgba(102, 102, 102, 0) 88.34%)',

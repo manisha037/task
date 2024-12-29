@@ -46,43 +46,42 @@ const CustomerTestimonials = () => {
   const [isHovered, setIsHovered] = useState(false)
   const testimonialRef = useRef(null)
 
-  const cardsPerView = 3 // Set how many cards to show at once
+  // const cardsPerView = 3 // Set how many cards to show at once
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
-  }
+  // const nextTestimonial = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
+  // }
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
-  }
+  // const prevTestimonial = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
+  // }
 
-  useEffect(() => {
-    if (!isHovered) {
-      const interval = setInterval(nextTestimonial, 3000)
-      return () => clearInterval(interval)
-    }
-  }, [isHovered])
+  // useEffect(() => {
+  //   if (!isHovered) {
+  //     const interval = setInterval(nextTestimonial, 3000)
+  //     return () => clearInterval(interval)
+  //   }
+  // }, [isHovered])
 
   return (
-    <section className="bg-[#F4F1FF] py-5 lg:py-20 w-[95%] mx-auto rounded-[32px]">
+    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%] mx-auto rounded-[32px]">
       <div className="container mx-auto">
         <h2 className="lg:text-[36px] text-[18px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
-             onMouseEnter={() => setIsHovered(true)}
-             onMouseLeave={() => setIsHovered(false)}>
-          <button 
+            >
+          {/* <button 
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10"
             onClick={prevTestimonial}
           >
             <ChevronLeft size={24} className="text-indigo-600" />
-          </button>
+          </button> */}
           <div className="overflow-hidden" ref={testimonialRef}>
             <div 
               className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
+            
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 lg:w-[804px] w-[320px] h-[360px] px-1"> {/* Show 3 cards at once */}
+                <div key={index} className="flex-shrink-0 lg:w-[770px] w-[320px] lg:h-[380px] px-1"> {/* Show 3 cards at once */}
                   <div  className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
                     <p className="text-[#1B2559] h-[200px] text-[16px] lg:text-[22px] leading-[28px]">
                    {testimonial.text1} <br/>
@@ -109,12 +108,12 @@ const CustomerTestimonials = () => {
               ))}
             </div>
           </div>
-          <button 
+          {/* <button 
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-10"
             onClick={nextTestimonial}
           >
             <ChevronRight size={24} className="text-indigo-600" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

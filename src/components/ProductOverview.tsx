@@ -6,7 +6,7 @@ const ProductOverview = () => {
     <section className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-stretch bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="w-full md:w-2/5 p-8 ">
+          <div className="w-full md:w-2/5 h-[634px] p-8 ">
             <div className=" rounded-xl ">
               <h2 className="text-2xl font-bold mb-4 text-indigo-900">Product Overview</h2>
               <p className="text-gray-600 mb-6">
@@ -28,7 +28,7 @@ const ProductOverview = () => {
               </a>
             </div>
           </div>
-          <div className="w-full md:w-3/5 relative">
+          <div className="w-full md:w-3/5 h-[634px] relative">
             <img
               src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
               alt="Product Overview"
