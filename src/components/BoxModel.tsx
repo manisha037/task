@@ -66,7 +66,7 @@ const BoxModel: React.FC = () => {
   }, [search]);
 
   const ProductNavigation=()=>{
-   const otherwindow= window.open("http://localhost:5173/cardai","_blank");
+   const otherwindow= window.open("http://localhost:5174/cardai","_blank");
    otherwindow?.postMessage(selectedApp);
     }
 

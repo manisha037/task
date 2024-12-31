@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend:  {
+      plugins: [require('tailwind-scrollbar-hide')],
       colors: {
         primary: '#FFF7EE',
         overlay: 'rgba(255, 247, 238, 0.8)',

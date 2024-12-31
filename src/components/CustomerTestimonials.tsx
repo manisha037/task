@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import logo from "../public/assets/image 367.png";
 import testimonial from "../public/assets/Testimonial2.jpeg";
@@ -65,6 +65,8 @@ const CustomerTestimonials = () => {
 
   return (
     <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%] mx-auto rounded-[32px]">
+
+
       <div className="container mx-auto">
         <h2 className="lg:text-[36px] text-[18px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
@@ -77,13 +79,13 @@ const CustomerTestimonials = () => {
           </button> */}
           <div className="overflow-hidden" ref={testimonialRef}>
             <div 
-              className="flex transition-transform duration-300 ease-in-out"
+              className="flex transition-transform  items-center overflow-x-auto hide-scrollbar md:justify-center lg:justify-start duration-300 ease-in-out px-2"
             
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 lg:w-[770px] w-[320px] lg:h-[380px] px-1"> {/* Show 3 cards at once */}
-                  <div  className="bg-white p-6 rounded-lg border-[0.8px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
-                    <p className="text-[#1B2559] h-[200px] text-[16px] lg:text-[22px] leading-[28px]">
+                <div key={index} className="flex-shrink-0 lg:w-[770px]  w-[290px]    lg:h-[380px] px-1"> {/* Show 3 cards at once */}
+                  <div  className="bg-white p-6 rounded-lg border-[0.8px] h-[400px] lg:h-[380px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
+                    <p className="text-[#1B2559] h-[200px] lg:text-[16px] overflow-clip  text-[14px] leading-[28px]">
                    {testimonial.text1} <br/>
                    <br/> {testimonial.text2}
 
@@ -94,7 +96,7 @@ const CustomerTestimonials = () => {
                         <img
                           src={testimonial.profile}
                           alt={testimonial.name}
-                          className="rounded-full w-[66px] h-[66px]"
+                          className="rounded-full lg:w-[66px] lg:h-[66px] w-[44px] h-[44px] "
                         />
                         <div>
                           <p className="lg:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
