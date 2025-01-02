@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend:  {
+      boxShadow: {
+        'custom': '2px 2px 10px 8px rgba(255, 209, 200, 0.2)',
+      },
       plugins: [require('tailwind-scrollbar-hide')],
       colors: {
         primary: '#FFF7EE',

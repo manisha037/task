@@ -1,6 +1,11 @@
 import ProductPages from "./ProductPages";
 import product1 from "../public/assets/product1.png";
+import {useState} from "react";
+
 const ProductNew = () => {
+  const [preview,setPreview]=useState("prodai");
+
+
   return (
     <div className="max-w-[1152px]  mx-auto w-[95vw] py-14">
       <h1 className="font-geologica lg:text-[25px]  text-[26px]  text-[#1B2559] lg:mb-5">
@@ -11,7 +16,7 @@ const ProductNew = () => {
       </div>
       <div className=" lg:flex-row flex flex-col-reverse w-[100%] gap-5 items-center">
         <div className="lg:w-[35%] w-full  flex flex-col gap-8 ">
-          <div className="flex gap-3 flex-col  lg:shadow-lg py-[24px] px-[20px] rounded-[20px] lg:shadow-[#FFD1C866] ">
+          {/* <div className="flex gap-3 flex-col   py-[24px] px-[20px] rounded-[20px]  lg:shadow-custom ">
             <p className=" font-geologica lg:text-[14px] text-[20px] xl:text-[18px] text-[#1B2559]">
               Prod Ai
             </p>
@@ -24,10 +29,10 @@ const ProductNew = () => {
               Empower your team to swiftly identify and prioritize features that
               drive customer retention
             </p>
-          </div>
+          </div> */}
 
           <div className="lg:flex flex-col gap-2 hidden  ">
-            <ProductPages />
+            <ProductPages  />
           </div>
         </div>
         <div className="w-full">

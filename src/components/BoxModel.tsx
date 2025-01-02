@@ -35,7 +35,7 @@ const BoxModel: React.FC = () => {
   const [reviews, setReviews] = useState<any[]>([]); // Replace `any` with a proper type if you know the structure of reviews
   const [isFetchingReviews, setIsFetchingReviews] = useState<boolean>(false);
 
-  const API_BASE_URL = "http://172.210.48.197:8000";
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const handleSearch = async () => {
@@ -65,8 +65,8 @@ const BoxModel: React.FC = () => {
     handleSearch();
   }, [search]);
 
-  const ProductNavigation=()=>{
-   const otherwindow= window.open("http://localhost:5174/cardai","_blank");
+  const ProductNavigation=(appId:string)=>{
+   const otherwindow= window.open(`http://localhost:5174/prodai/${appId}`,"_blank");
    otherwindow?.postMessage(selectedApp);
     }
 
@@ -99,7 +99,7 @@ const BoxModel: React.FC = () => {
           const reviewsData = await reviewsResponse.json();
           setReviews(reviewsData);
           setIsFetchingReviews(false);
-          setTimeout(ProductNavigation,1000);
+          setTimeout(()=>ProductNavigation(app.appId),1000);
         } else if (statusData.status === "failed") {
           throw new Error(statusData.error_message || "Failed to fetch reviews");
         } else {

@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-screen h-[64px] relative items-center">
+      <div className="max-w-[1152px] mx-auto h-[64px] relative items-center">
         <div className="w-[90%] mx-auto flex items-center my-5 justify-between">
           <img
             src={logo}
