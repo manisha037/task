@@ -1,6 +1,7 @@
 import ProductPages from "./ProductPages";
 import product1 from "../public/assets/product1.png";
 import {useState} from "react";
+import MobileProduct from "./MobileProduct";
 
 const ProductNew = () => {
   const [preview,setPreview]=useState("prodai");
@@ -12,10 +13,10 @@ const ProductNew = () => {
         Product Overview
       </h1>
       <div className="flex lg:hidden justify-center gap-1 sm:gap-4 py-5">
-        <ProductPages />
+        <MobileProduct />
       </div>
       <div className=" lg:flex-row flex flex-col-reverse w-[100%] gap-5 items-center">
-        <div className="lg:w-[45%] w-full  flex flex-col gap-8 ">
+        <div className="lg:w-[35%] w-full  flex flex-col gap-8 ">
           {/* <div className="flex gap-3 flex-col   py-[24px] px-[20px] rounded-[20px]  lg:shadow-custom ">
             <p className=" font-geologica lg:text-[14px] text-[20px] xl:text-[18px] text-[#1B2559]">
               Prod Ai
@@ -36,7 +37,7 @@ const ProductNew = () => {
           </div>
         </div>
         <div className="w-full">
-          <img src={product1} alt="product" className=" w-[760px] h-[353px] " />
+          <img src={product1} alt="product" className=" w-full " />
         </div>
       </div>
     </div>

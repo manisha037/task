@@ -1,4 +1,5 @@
 
+
 const ActiveProduct = ({heading,p1,p2}:{heading:string,p1:string,p2:string}) => {
   return (
    <div className="flex gap-3 flex-col   py-[24px] px-[20px] rounded-[20px]  lg:shadow-custom ">

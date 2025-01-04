@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+// import { ChevronLeft, ChevronRight } from 'lucide-react'
 import logo from "../public/assets/image 367.png";
 import testimonial from "../public/assets/Testimonial2.jpeg";
 import testimonial1 from "../public/assets/unnamed.png";
@@ -24,21 +24,7 @@ const testimonials = [
     profile_logo:logo
 
   }
-  // {
-  //   text: "The insights we've gained through Prodloop have directly contributed to our product improvements.",
-  //   name: "Michael Chang",
-  //   role: "Product Manager, FutureSoft"
-  // },
-  // {
-  //   text: "Prodloop's AI-powered analysis has saved us countless hours in processing customer feedback.",
-  //   name: "Emily Rodriguez",
-  //   role: "Customer Success Lead, DataDrive"
-  // },
-  // {
-  //   text: "We've seen a significant increase in customer satisfaction since implementing Prodloop's recommendations.",
-  //   name: "David Nguyen",
-  //   role: "CEO, CloudSolutions"
-  // }
+ 
 ]
 
 const CustomerTestimonials = () => {
@@ -64,7 +50,7 @@ const CustomerTestimonials = () => {
   // }, [isHovered])
 
   return (
-    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%] mx-auto rounded-[32px]">
+    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%]  mx-auto rounded-[32px]">
 
 
       <div className="container mx-auto">
@@ -79,13 +65,13 @@ const CustomerTestimonials = () => {
           </button> */}
           <div className="overflow-hidden" ref={testimonialRef}>
             <div 
-              className="flex transition-transform  items-center overflow-x-auto hide-scrollbar md:justify-center lg:justify-start duration-300 ease-in-out px-2"
+              className="flex transition-transform  items-center overflow-x-auto hide-scrollbar md:justify-center xl:justify-center duration-300 ease-in-out px-2"
             
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 lg:w-[770px]  w-[290px]    lg:h-[380px] px-1"> {/* Show 3 cards at once */}
+                <div key={index} className="flex-shrink-0 xl:w-[587px]  w-[290px]    px-1"> {/* Show 3 cards at once */}
                   <div  className="bg-white p-6 rounded-lg border-[0.8px] h-[400px] lg:h-[380px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
-                    <p className="text-[#1B2559] h-[200px] lg:text-[16px] overflow-clip  text-[14px] leading-[28px]">
+                    <p className="text-[#1B2559] h-[200px] xl:text-[16px] overflow-clip  text-[14px] leading-[28px]">
                    {testimonial.text1} <br/>
                    <br/> {testimonial.text2}
 
@@ -99,7 +85,7 @@ const CustomerTestimonials = () => {
                           className="rounded-full lg:w-[66px] lg:h-[66px] w-[44px] h-[44px] "
                         />
                         <div>
-                          <p className="lg:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
+                          <p className="xl:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
                           <p className="font-geologica lg:text-[19px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
                         </div>
                       </div>

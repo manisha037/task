@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* Mobile Menu */}
-      <div className="w-[95%] mx-auto mb-4 border border-[#C0B3F8] rounded-full p-[5px] flex sm:hidden item-center gap-8 justify-center">
+      <div className="w-[95%] mx-auto -mt-3 mb-4 border border-[#C0B3F8] rounded-full p-[5px] flex sm:hidden item-center gap-8 justify-center">
         {menuItems.map((item, index) => (
           <div
             key={index}

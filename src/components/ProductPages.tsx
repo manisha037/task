@@ -75,7 +75,9 @@ const ProductPages = () => {
       {content === "alerts" && (
         <ActiveProduct
           heading="Alerts"
-          p1="Stay ahead with proactive alerts. Prod AI identifies anomalies and keeps you updated on the metrics that matter most."
+          p1="Stay ahead with proactive alerts. Prod AI identifies anomalies and keeps you updated on the metrics that matter most. 
+
+"
           p2="Get alerts where you want—Slack, email, or your preferred channel. ProdAlerts works tirelessly, even while you sleep"
         />
       )}
