@@ -68,7 +68,7 @@ const CustomerTestimonials = () => {
 
 
       <div className="container mx-auto">
-        <h2 className="lg:text-[36px] text-[18px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
+        <h2 className="xl:text-[26px] text-[24px]  md:text-[20px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
             >
           {/* <button 

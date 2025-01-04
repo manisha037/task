@@ -27,15 +27,15 @@ const MainHero = () => {
 
   return (
     <section className="sm:w-[100vw] sm:py-10  py-6 w-[95vw] mx-auto rounded-[30px] sm:rounded-none     bg-gradient-to-r   sm:flex items-center sm:justify-center  from-[#FFF7EE] to-[#4318FF08]  ">
-      <div className="sm:flex w-[88%] sm:w-[85%] xl:w-[80%] max-w-[1152px]   mx-auto items-center   sm:justify-between sm:flex-row   flex-col">
+      <div className="sm:flex w-[88%] sm:w-[90%] xl:w-[80%] max-w-[1152px]   mx-auto items-center   sm:justify-between sm:flex-row   flex-col">
         <div className="flex flex-col sm:w-[60%] h-full  justify-between">
-          <div className="flex flex-col   ">
+          <div className="flex flex-col    ">
             <div className="flex flex-col">
-              <h2 className="font-[200] sm:font-[100] text-[18px] sm:text-[20px] lg:text-[24px] font-geologica xl:text-[28px]  text-[#1B2559]  ">
+              <h2 className="sm:font-[200]  font-[100] text-[18px] sm:text-[20px] lg:text-[24px] font-geologica xl:text-[28px]  text-[#1B2559] -mb-1  lg:-mb-3 ">
                 Convert
               </h2>
               <div className="flex items-center ">
-                <h1 className="whitespace-nowrap font-[400] text-[#1B2559] text-[22px] sm:text-[26px] lg:text-[36px]   xl:text-[44px]  font-geologica flex items-center">
+                <h1 className="whitespace-nowrap font-[400] text-[#1B2559] text-[22px] sm:text-[26px] lg:text-[36px]   xl:text-[44px]  font-geologica flex items-center ">
                   Customer Feedback &nbsp;
                 </h1>
                 <img
@@ -48,7 +48,7 @@ const MainHero = () => {
               </div>
             </div>
             <div className="flex flex-col">
-              <h2 className="font-[200] sm:font-[100] text-[18px] sm:text-[20px] lg:text-[24px] font-geologica xl:text-[28px]  text-[#1B2559]   ">
+              <h2 className="sm:font-[200]  font-[100] text-[18px] sm:text-[20px] lg:text-[24px] font-geologica xl:text-[28px]  text-[#1B2559] lg:-mb-3 -mb-1 ">
                 Intro
               </h2>
               <div className="flex items-center">
@@ -65,14 +65,15 @@ const MainHero = () => {
               </div>
             </div>
           </div>
-          <div className="sm:flex hidden flex-col xl:gap-8 ">
-            <div className="flex flex-col gap-2 sm:mt-8">
+          <div className="sm:flex hidden flex-col xl:gap-2 mt-14 ">
+            <div className="flex flex-col gap-2  lg:mt-8">
               {" "}
               <p className="  text-[13px]  lg:text-[16px] font-geologica font-[300] sm:font-[400] text-[#4318FF] ">
                 AI powered Customer Intelligence tool
               </p>
               <p className="lg:text-[16px] md:leading-[22px] text-[13px] font-sans font-[600] w-[80%]  text-[#1B2559]  ">
-              Generate insights from feedback data from customer support calls and surveys using natural language
+                Generate insights from feedback data from customer support calls
+                and surveys using natural language
               </p>
             </div>
             <div
@@ -89,14 +90,14 @@ const MainHero = () => {
         </div>
 
         {/* <div className="bg-white xl:w-[367px] xl:h-[379px]  max-h-[480px] rounded-[20px] shadow-lg  sm:mt-0  "> */}
-          {/* Placeholder for the GIF or image */}
-          <div className=" my-8 rounded-2xl shadow-lg bg-white xl:w-[367px] xl:h-[379px] h-[45vh]  sm:w-[249px] sm:h-[258px] md:w-[289px] md:h-[298px]   flex items-center justify-center">
-            <DotLottieReact
+        {/* Placeholder for the GIF or image */}
+        <div className=" my-8 rounded-2xl shadow-lg bg-white xl:w-[367px] xl:h-[379px] h-[45vh]  sm:w-[249px] sm:h-[258px] md:w-[289px] md:h-[298px]   flex items-center justify-center">
+          <DotLottieReact
             className="w-full h-full"
-              src="src\public\assets\animation.lottie"
-              loop
-              autoplay
-            />
+            src="src\public\assets\animation.lottie"
+            loop
+            autoplay
+          />
           {/* </div> */}
           <Modal
             open={open}
@@ -111,29 +112,27 @@ const MainHero = () => {
           </Modal>
         </div>
         <div className="flex sm:hidden flex-col gap-1  ">
-            <div className="flex gap-2 flex-col">
-            
-               
-                <p className=" text-[15px] font-geologica  font-[300] text-[#4318FF] ">
-                  AI Powered Speech And Text Feedback Analytics Tool
-                </p>
-     
-              <p className="md:text-[18px] text-[15px]  text-[#1B2559] mb-8 lg:ml-[88px]">
-                Generate insights from feedback data from customer support calls
-                and surveys using natural language
-              </p>
-            </div>
-            <div
-              onClick={handleOpen}
-              className="border-[1.5px] cursor-pointer  gap-1 py-1  border-[#4318FF] justify-center text-[#4318FF] text-center hover:text-[white]  hover:bg-[#4318FF] font-[500] text-[14px]   rounded-full  inline-flex items-center"
-            >
-              <p className="text-[16px] font-[500] font-sans">
-                {" "}
-                Get Started for Free
-              </p>
-              <ArrowOutwardIcon className="text-[6px]" />
-            </div>
+          <div className="flex gap-2 flex-col">
+            <p className=" text-[15px] font-geologica  font-[300] text-[#4318FF] ">
+              AI Powered Speech And Text Feedback Analytics Tool
+            </p>
+
+            <p className="md:text-[18px] text-[15px]  text-[#1B2559] mb-8 lg:ml-[88px]">
+              Generate insights from feedback data from customer support calls
+              and surveys using natural language
+            </p>
           </div>
+          <div
+            onClick={handleOpen}
+            className="border-[1.5px] cursor-pointer  gap-1 py-1  border-[#4318FF] justify-center text-[#4318FF] text-center hover:text-[white]  hover:bg-[#4318FF] font-[500] text-[14px]   rounded-full  inline-flex items-center"
+          >
+            <p className="text-[16px] font-[500] font-sans">
+              {" "}
+              Get Started for Free
+            </p>
+            <ArrowOutwardIcon className="text-[6px]" />
+          </div>
+        </div>
       </div>
     </section>
   );
