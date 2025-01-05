@@ -1,5 +1,5 @@
 import ProductPages from "./ProductPages";
-import product1 from "../public/assets/product1.png";
+import review1 from "../public/assets/review1.png";
 import {useState} from "react";
 import MobileProduct from "./MobileProduct";
 
@@ -37,7 +37,7 @@ const ProductNew = () => {
           </div>
         </div>
         <div className="w-full">
-          <img src={product1} alt="product" className=" w-full " />
+          <img src={review1} alt="product" className=" w-full " />
         </div>
       </div>
     </div>

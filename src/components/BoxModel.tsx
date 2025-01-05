@@ -37,7 +37,7 @@ const BoxModel: React.FC = () => {
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const API_SCRAPE_URL = import.meta.env.VITE_API_SCRAPE_URL;
-  const API_REVIEW_URL = import.meta.env.VITE_API_REVIEW_URL;
+  // const API_REVIEW_URL = import.meta.env.VITE_API_REVIEW_URL;
 
   useEffect(() => {
     const handleSearch = async () => {
@@ -81,10 +81,11 @@ const BoxModel: React.FC = () => {
     setError(null);
 
     try {
+      console.log(`${API_SCRAPE_URL}/scrape`)
       const scrapeResponse = await fetch(`${API_SCRAPE_URL}/scrape`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ appId }),
+        body: JSON.stringify({app_id: appId }),
       });
 
       if (!scrapeResponse.ok) throw new Error("Failed to start scraping");
