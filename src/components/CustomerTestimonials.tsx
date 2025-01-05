@@ -50,7 +50,7 @@ const CustomerTestimonials = () => {
   // }, [isHovered])
 
   return (
-    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%]  mx-auto rounded-[32px]">
+    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%] max-w-[1152px]  mx-auto rounded-[32px]">
 
 
       <div className="container mx-auto">
@@ -69,9 +69,9 @@ const CustomerTestimonials = () => {
             
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 xl:w-[587px]  w-[290px]    px-1"> {/* Show 3 cards at once */}
-                  <div  className="bg-white p-6 rounded-lg border-[0.8px] h-[400px] lg:h-[380px] border-[#C0B3F8] flex flex-col gap-4 mx-auto">
-                    <p className="text-[#1B2559] h-[200px] xl:text-[16px] overflow-clip  text-[14px] leading-[28px]">
+                <div key={index} className="flex-shrink-0 xl:w-[567px]   w-[290px]     px-1"> {/* Show 3 cards at once */}
+                  <div  className="bg-white p-6 rounded-lg border-[0.8px]   border-[#C0B3F8] flex flex-col gap-3 mx-auto">
+                    <p className="text-[#1B2559] h-[200px] xl:text-[15px] overflow-clip  text-[14px] leading-[20px]">
                    {testimonial.text1} <br/>
                    <br/> {testimonial.text2}
 
@@ -82,14 +82,14 @@ const CustomerTestimonials = () => {
                         <img
                           src={testimonial.profile}
                           alt={testimonial.name}
-                          className="rounded-full lg:w-[66px] lg:h-[66px] w-[44px] h-[44px] "
+                          className="rounded-full xl:w-[46px] xl:h-[46px] w-[44px] h-[44px] "
                         />
                         <div>
                           <p className="xl:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
                           <p className="font-geologica lg:text-[19px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
                         </div>
                       </div>
-                      <img src={testimonial.profile_logo} width={90} height={56} alt="" className='hidden lg:flex' />
+                      <img src={testimonial.profile_logo} width={40} height={40} alt="" className='hidden lg:flex w-[40px] h-[40px]' />
                     </div>
                   </div>
                 </div>

@@ -36,6 +36,8 @@ const BoxModel: React.FC = () => {
   const [isFetchingReviews, setIsFetchingReviews] = useState<boolean>(false);
 
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const API_SCRAPE_URL = import.meta.env.VITE_API_SCRAPE_URL;
+  const API_REVIEW_URL = import.meta.env.VITE_API_REVIEW_URL;
 
   useEffect(() => {
     const handleSearch = async () => {
@@ -79,7 +81,7 @@ const BoxModel: React.FC = () => {
     setError(null);
 
     try {
-      const scrapeResponse = await fetch(`${API_BASE_URL}/scrape`, {
+      const scrapeResponse = await fetch(`${API_SCRAPE_URL}/scrape`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ appId }),
@@ -88,16 +90,23 @@ const BoxModel: React.FC = () => {
       if (!scrapeResponse.ok) throw new Error("Failed to start scraping");
 
       const { jobId }: { jobId: string } = await scrapeResponse.json();
+      console.log(jobId)
 
       // Poll for job completion
       const checkStatus = async () => {
-        const statusResponse = await fetch(`${API_BASE_URL}/scrape/${jobId}/status`);
+        const statusResponse = await fetch(`${API_SCRAPE_URL}/scrape/${jobId}/status`);
+        console.log(statusResponse);
         const statusData = await statusResponse.json();
+        console.log(statusData);
 
         if (statusData.status === "completed") {
-          const reviewsResponse = await fetch(`${API_BASE_URL}/reviews/${app.appId}`);
-          const reviewsData = await reviewsResponse.json();
-          setReviews(reviewsData);
+          // const reviewsResponse = await fetch(`${API_REVIEW_URL}/${app.appId}`,{
+          //   method: "POST",
+          //   headers: { "Content-Type": "application/json" },
+          //   body: JSON.stringify({ appId }),
+          // });
+          // const reviewsData = await reviewsResponse.json();
+          // setReviews(reviewsData);
           setIsFetchingReviews(false);
           setTimeout(()=>ProductNavigation(app.appId),1000);
         } else if (statusData.status === "failed") {
@@ -110,7 +119,8 @@ const BoxModel: React.FC = () => {
       checkStatus();
     } catch (err) {
       setError("Failed to fetch reviews. Please try again.");
-      setIsFetchingReviews(false);
+      console.log("Failed to fetch reviews. Please try again.");
+      setIsFetchingReviews(true);
     }
   };
 

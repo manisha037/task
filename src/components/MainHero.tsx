@@ -40,7 +40,7 @@ const MainHero = () => {
                 </h1>
                 <img
                   src={customer}
-                  className="lg:w-[53px] lg:h-[43px] sm:w-[44px] sm:h-[33px] w-[40px] h-[29px] -mt-3"
+                  className="lg:w-[53px] lg:h-[43px] sm:w-[44px] sm:h-[33px] w-[40px] h-[29px] -ml-3 -mt-3"
                   alt="customer"
                   width={95.8}
                   height={77.76}
@@ -49,7 +49,7 @@ const MainHero = () => {
             </div>
             <div className="flex flex-col">
               <h2 className="sm:font-[200]  font-[100] text-[18px] sm:text-[20px] lg:text-[24px] font-geologica xl:text-[28px]  text-[#1B2559] lg:-mb-3 -mb-1 ">
-                Intro
+                Into
               </h2>
               <div className="flex items-center">
                 <h1 className="whitespace-nowrap font-[400] text-[#1B2559] text-[22px] sm:text-[26px] lg:text-[36px]   xl:text-[44px]  font-geologica flex items-center">
@@ -57,7 +57,7 @@ const MainHero = () => {
                 </h1>
                 <img
                   src={revenue}
-                  className="lg:w-[41px] lg:h-[47px] sm:w-[32px] sm:h-[36px] w-[29px] h-[32px]   -mt-3   "
+                  className="lg:w-[41px] lg:h-[47px] sm:w-[32px] sm:h-[36px] w-[29px] h-[32px] -ml-3   -mt-3   "
                   alt="customer"
                   width={74.13}
                   height={84.4}
