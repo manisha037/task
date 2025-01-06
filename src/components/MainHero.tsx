@@ -6,9 +6,10 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 // import AppReviewsDashboard from "./AppReviewsDashboard";
 import BoxModel from "./BoxModel";
-
+import Lottie from "lottie-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
+import animation from "../public/assets/raja prodloop.json";
 const style = {
   position: "absolute",
   bgcolor: "background.paper",
@@ -26,7 +27,7 @@ const MainHero = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <section className="sm:w-[100vw] sm:py-10  py-6 w-[95vw] mx-auto rounded-[30px] sm:rounded-none     bg-gradient-to-r   sm:flex items-center sm:justify-center  from-[#FFF7EE] to-[#4318FF08]  ">
+    <section className="sm:w-[100vw] sm:py-14  py-6 w-[95vw] mx-auto rounded-[30px] sm:rounded-none     bg-gradient-to-r   sm:flex items-center sm:justify-center  from-[#FFF7EE] to-[#4318FF08]  ">
       <div className="sm:flex w-[88%] sm:w-[90%] xl:w-[80%] max-w-[1152px]   mx-auto items-center   sm:justify-between sm:flex-row   flex-col">
         <div className="flex flex-col sm:w-[60%] h-full  justify-between">
           <div className="flex flex-col    ">
@@ -91,13 +92,8 @@ const MainHero = () => {
 
         {/* <div className="bg-white xl:w-[367px] xl:h-[379px]  max-h-[480px] rounded-[20px] shadow-lg  sm:mt-0  "> */}
         {/* Placeholder for the GIF or image */}
-        <div className=" my-8 rounded-2xl shadow-lg bg-white xl:w-[367px] xl:h-[379px] h-[45vh]  sm:w-[249px] sm:h-[258px] md:w-[289px] md:h-[298px]   flex items-center justify-center">
-          <DotLottieReact
-            className="w-full h-full"
-            src="src\public\assets\animation.lottie"
-            loop
-            autoplay
-          />
+        {/* <div className="  rounded-2xl shadow-lg bg-white xl:w-[367px] xl:h-[379px] h-[45vh]  sm:w-[249px] sm:h-[258px] md:w-[289px] md:h-[298px]   flex items-center justify-center"> */}
+          <Lottie animationData={animation} loop={true} className="" />
           {/* </div> */}
           <Modal
             open={open}
@@ -110,7 +106,7 @@ const MainHero = () => {
               <BoxModel />
             </Box>
           </Modal>
-        </div>
+       
         <div className="flex sm:hidden flex-col gap-1  ">
           <div className="flex gap-2 flex-col">
             <p className=" text-[15px] font-geologica  font-[300] text-[#4318FF] ">
