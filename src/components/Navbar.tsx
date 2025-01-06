@@ -74,7 +74,7 @@ const Navbar = () => {
             <div className="font-medium xl:text-[16px] text-[12px]  md:text-[14px]  text-[#4318FF] font-sans cursor-pointer">
               Log In
             </div>
-            <div className="text-white cursor-pointer bg-[#4318FF] font-bold rounded-full xl:text-[16px] text-[12px] md:text-[14px] w-[100px] h-[25px] grid place-content-center xl:w-[133px] xl:h-[40px] border-[1.5px] border-[#7252FF]  items-center ">
+            <div className="text-white cursor-pointer bg-[#4318FF] font-bold rounded-full xl:text-[15px] text-[12px] md:text-[14px] w-[100px] h-[25px] grid place-content-center xl:w-[133px] xl:h-[40px] border-[1.5px] border-[#7252FF]  items-center ">
               Book a demo
             </div>
           </div>

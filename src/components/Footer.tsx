@@ -11,7 +11,7 @@ const Footer = () => {
   </div>
   <div className="w-[85%] flex items-center justify-center flex-col gap-1 xl:flex-row-reverse xl:gap-3">
     <img src={logo} alt="" className="grayscale w-[81px] h-[13px] xl:w-[101px] xl:h-[16px]"  />
-   <div className="flex items-center gap-1"><span className="xl:text-[19px]  text-[15px] text-[#7D756C] font-semibold">&copy;</span> <p className="text-[#7D756C] text-[11px] xl:text-[14px]"> 2024</p></div>
+   <div className="flex items-center gap-1"><span className="xl:text-[19px]  text-[15px] text-[#7D756C] font-bold">&copy;</span> <p className="text-[#7D756C] -ml-[0.5px] text-[11px] xl:text-[14px]"> 2024</p></div>
 
   </div>
 </section>

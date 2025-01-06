@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import logo from "../public/assets/image 367.png";
 import testimonial from "../public/assets/Testimonial2.jpeg";
 import testimonial1 from "../public/assets/unnamed.png";
-import porter from "../public/assets/porter.jpeg";
+import porter from "../public/assets/porter.svg";
 
 
 const testimonials = [
@@ -50,11 +50,11 @@ const CustomerTestimonials = () => {
   // }, [isHovered])
 
   return (
-    <section className="bg-[#F4F1FF] py-5 lg:py-14 w-[95%] max-w-[1152px]  mx-auto rounded-[32px]">
+    <section className="bg-[#F4F1FF] py-5 lg:py-8 w-[95%] lg:w-[100%] max-w-[1152px] xl:h-[370px] mx-auto rounded-[32px]">
 
 
       <div className="container mx-auto">
-        <h2 className="xl:text-[26px] text-[24px]  md:text-[20px] mb-10 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
+        <h2 className="xl:text-[26px] text-[24px]  md:text-[20px] mb-5 text-center font-geologica text-[#1B2559]">What Our Customers Say</h2>
         <div className="relative"
             >
           {/* <button 
@@ -63,30 +63,31 @@ const CustomerTestimonials = () => {
           >
             <ChevronLeft size={24} className="text-indigo-600" />
           </button> */}
-          <div className="overflow-hidden" ref={testimonialRef}>
+          {/* <div className="overflow-hidden" ref={testimonialRef}> */}
             <div 
-              className="flex transition-transform  items-center overflow-x-auto hide-scrollbar md:justify-center xl:justify-center duration-300 ease-in-out px-2"
+              className="flex  items-center  md:justify-center xl:justify-center   gap-2"
             
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 xl:w-[567px]   w-[290px]     px-1"> {/* Show 3 cards at once */}
-                  <div  className="bg-white p-6 rounded-lg border-[0.8px]   border-[#C0B3F8] flex flex-col gap-3 mx-auto">
-                    <p className="text-[#1B2559] h-[200px] xl:text-[15px] overflow-clip  text-[14px] leading-[20px]">
+                <div key={index} className="flex-shrink-0 xl:w-[567px]   xl:h-[254px]     "> {/* Show 3 cards at once */}
+                  <div  className="bg-white px-[25px] pt-[30px] pb-[16px]  rounded-lg border-[0.8px]   border-[#C0B3F8] flex flex-col gap-1 mx-auto">
+                   <div className='h-[132.78px]'> <p className="text-[#1B2559] h-[200px] xl:text-[15px] overflow-clip  text-[14px] leading-[19px]">
                    {testimonial.text1} <br/>
                    <br/> {testimonial.text2}
 
                     </p>
+                    </div>
                     <hr className="bg-[#4318FF] border-0 m-0" style={{ height: '0.61px' }} />
-                    <div className='flex justify-between'>
-                      <div className="flex items-center gap-4">
+                    <div className='flex justify-between h-[67.7px] items-center'>
+                      <div className="flex items-center gap-3">
                         <img
                           src={testimonial.profile}
                           alt={testimonial.name}
                           className="rounded-full xl:w-[46px] xl:h-[46px] w-[44px] h-[44px] "
                         />
                         <div>
-                          <p className="xl:text-[19px] text-[14px] text-[#1B2559] font-geologica">{testimonial.name}</p>
-                          <p className="font-geologica lg:text-[19px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
+                          <p className="xl:text-[14px]  text-[#1B2559] font-geologica">{testimonial.name}</p>
+                          <p className="font-geologica lg:text-[13.41px] text-[14px] font-thin text-[#1B2559]">{testimonial.role}</p>
                         </div>
                       </div>
                       <img src={testimonial.profile_logo} width={40} height={40} alt="" className='hidden lg:flex w-[40px] h-[40px]' />
@@ -103,7 +104,7 @@ const CustomerTestimonials = () => {
             <ChevronRight size={24} className="text-indigo-600" />
           </button> */}
         </div>
-      </div>
+      {/* </div> */}
     </section>
   )
 }

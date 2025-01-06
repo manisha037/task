@@ -40,7 +40,7 @@ const MainHero = () => {
                 </h1>
                 <img
                   src={customer}
-                  className="lg:w-[53px] lg:h-[43px] sm:w-[44px] sm:h-[33px] w-[40px] h-[29px] -ml-3 -mt-3"
+                  className="lg:w-[52.92px] lg:h-[42.96px] sm:w-[44px] sm:h-[33px] w-[40px] h-[29px] -ml-3 -mt-3"
                   alt="customer"
                   width={95.8}
                   height={77.76}
@@ -71,7 +71,7 @@ const MainHero = () => {
               <p className="  text-[13px]  lg:text-[16px] font-geologica font-[300] sm:font-[400] text-[#4318FF] ">
                 AI powered Customer Intelligence tool
               </p>
-              <p className="lg:text-[16px] md:leading-[22px] text-[13px] font-sans font-[600] w-[80%]  text-[#1B2559]  ">
+              <p className="lg:text-[16px] md:leading-[22px] text-[13px] font-sans font-[500] w-[80%]  text-[#1B2559]  ">
                 Generate insights from feedback data from customer support calls
                 and surveys using natural language
               </p>
@@ -80,7 +80,7 @@ const MainHero = () => {
               onClick={handleOpen}
               className="border-[1.5px] sm:mt-4 cursor-pointer bg-[#4318FF] gap-1 py-1  border-[#4318FF] justify-center text-white text-center hover:text-[#4318FF] hover:bg-white font-[500]  text-[14px] sm:w-[212px] sm:h-[29px]  xl:w-[270px] xl:h-[37px] rounded-full  inline-flex items-center"
             >
-              <p className="lg:text-[16px] font-[600] font-sans">
+              <p className="lg:text-[13.81px] font-[700] font-sans">
                 {" "}
                 Get Started for Free
               </p>

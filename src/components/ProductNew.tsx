@@ -1,14 +1,17 @@
 import ProductPages from "./ProductPages";
-import review1 from "../public/assets/review1.png";
+import prodai from "../public/assets/review1.png";
 import {useState} from "react";
 import MobileProduct from "./MobileProduct";
+import alert from "../public/assets/Alerts.png";
+import dashboard from "../public/assets/Dashboards.png";
+import feedback from "../public/assets/Feedback.png";
 
 const ProductNew = () => {
   const [preview,setPreview]=useState("prodai");
 
 
   return (
-    <div className="max-w-[1152px]  mx-auto w-[95vw] py-14">
+    <div className="max-w-[1152px]  mx-auto w-[95vw] xl:w-[100vw] py-14">
       <h1 className="font-geologica lg:text-[25px]  text-[26px]  text-[#1B2559] lg:mb-5">
         Product Overview
       </h1>
@@ -33,11 +36,15 @@ const ProductNew = () => {
           </div> */}
 
           <div className="lg:flex flex-col gap-2 hidden  ">
-            <ProductPages  />
+            <ProductPages preview={preview} setPreview={setPreview} />
           </div>
         </div>
         <div className="w-full">
-          <img src={review1} alt="product" className=" w-full " />
+          {preview==="prodai" &&  <img src={prodai} alt="product" className=" w-full " />}
+          {preview==="alert" &&  <img src={alert} alt="product" className=" w-full " />}
+          {preview==="dashboard" &&  <img src={dashboard} alt="product" className=" w-full " />}
+          {preview==="feedback" &&  <img src={feedback} alt="product" className=" w-full " />}
+         
         </div>
       </div>
     </div>
