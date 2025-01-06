@@ -10,8 +10,8 @@ const Card = ({
   subheading: string;
 }) => {
   return (
-    <div className=" sm:h-[220px] rounded-[24px] shadow-[#0E09581A]  w-[95%] xl:w-[372.71px] xl:h-[344.47px] lg:w-[283px] sm:w-[263px]    lg:h-[241px] shadow-[0px_1.56px_33.09px_-2.65px_#0E09581A] flex flex-col justify-around  px-[45.18px] py-[50.82px] ">
-     <div className="w-[282.35px] h-[265.94px] gap-[27px] flex flex-col">
+    <div className=" sm:h-[220px] rounded-[24px] shadow-[#0E09581A]  w-[95%] xl:w-[372.71px] xl:h-[344.47px] lg:w-[283px] sm:w-[263px]    lg:h-[241px] shadow-[0px_1.56px_33.09px_-2.65px_#0E09581A] flex flex-col justify-around  px-[45.18px] py-[50px] ">
+     <div className="w-[282.35px] h-[265.94px] gap-1  flex flex-col">
         <h3 className="xl:text-[56.47px] lg:[44px] sm:text-[26px] text-[58px] whitespace-nowrap text-[#3C14EA] font-geologica font-semibold  ">
           {percentage == "8 %" ? (
             <>
@@ -37,15 +37,18 @@ const Card = ({
             <>{percentage}</>
           )}
         </h3>
-        <p className="xl:text-[19.76px] sm:text-[16px] text-[23px] font-geologica text-[#1B2559] font-medium ">
+        <div className="flex flex-col gap-[33.88px] w-[282.35px] h-[197.71px]">
+        <p className="xl:text-[19.76px] sm:text-[16px]  text-[23px] font-geologica text-[#1B2559] font-medium ">
           {mainheading}
         </p>
       
-      <p className="xl:text-[15.53px] text-[21px] sm:text-[12px] xl:leading-[22.59px] sm:leading-[17px] leading-[28px] text-[#1B2559CC] line-clamp-4">
+      <p className="xl:text-[15.53px] text-[21px] sm:text-[12px] xl:leading-[22.59px] sm:leading-[17px] leading-[28px] text-[#1B2559CC] ">
         {" "}
         {subheading}
       </p>
+      </div>
     </div>
+
     </div>
   );
 };
