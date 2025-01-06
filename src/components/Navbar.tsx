@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import DropdownMenu from './DropdownMenu';
 import { useNavigate } from 'react-router-dom';
 import Modal from '@mui/material/Modal';
-
+import {Link} from "react-router-dom"
 const Navbar = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // Tracks the active dropdown
   const navigate = useNavigate();
@@ -74,9 +74,9 @@ const Navbar = () => {
             <div className="font-medium xl:text-[16px] text-[12px]  md:text-[14px]  text-[#4318FF] font-sans cursor-pointer">
               Log In
             </div>
-            <div className="text-white cursor-pointer bg-[#4318FF] font-bold rounded-full xl:text-[15px] text-[12px] md:text-[14px] w-[100px] h-[25px] grid place-content-center xl:w-[133px] xl:h-[40px] border-[1.5px] border-[#7252FF]  items-center ">
+           <Link to="https://calendly.com/raja-prodloop/book-a-demo"> <div className="text-white cursor-pointer bg-[#4318FF] font-bold rounded-full xl:text-[15px] text-[12px] md:text-[14px] w-[100px] h-[25px] grid place-content-center xl:w-[133px] xl:h-[40px] border-[1.5px] border-[#7252FF]  items-center ">
               Book a demo
-            </div>
+            </div></Link>
           </div>
         </div>
       </div>
