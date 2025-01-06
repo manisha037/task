@@ -69,7 +69,7 @@ const MainHero = () => {
             <div className="flex flex-col gap-2  lg:mt-8">
               {" "}
               <p className="  text-[13px]  lg:text-[16px] font-geologica font-[300] sm:font-[400] text-[#4318FF] ">
-                AI powered Customer Intelligence tool
+              AI Powered Speech And Text Feedback Analytics Tool
               </p>
               <p className="lg:text-[16px] md:leading-[22px] text-[13px] font-sans font-[500] w-[80%]  text-[#1B2559]  ">
                 Generate insights from feedback data from customer support calls

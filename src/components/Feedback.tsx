@@ -1,5 +1,7 @@
 
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import { Link } from "react-router-dom";
+
 
 const Feedback = () => {
   return (
@@ -16,9 +18,9 @@ const Feedback = () => {
               <p className='text-[#4318FF] xl:text-[14.12px] md:text-[16px] text-[14px] font-medium'>Get Started for Free</p>
               <ArrowOutwardIcon className=' text-[#4318FF] text-[16.94px]' />
             </div>
-            <div className='xl:text-[14.12px] md:text-[16px] text-[14px] font-bold border-[1.5px] text-white rounded-full justify-center items-center bg-[#4318FF] border-[#7252FF] flex gap-2 xl:h-[36.94px] h-[36px] w-[90%] xl:w-[369.88px]'>
+        <Link to="https://calendly.com/raja-prodloop/book-a-demo">  <div className='xl:text-[14.12px] md:text-[16px] text-[14px] font-bold border-[1.5px] text-white rounded-full justify-center items-center bg-[#4318FF] border-[#7252FF] flex gap-2 xl:h-[36.94px] h-[36px] w-[90%] xl:w-[369.88px]'>
               Book a Demo Call with us
-            </div>
+            </div></Link>
           </div>
         </div>
       </div>

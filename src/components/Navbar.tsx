@@ -42,7 +42,7 @@ const Navbar = () => {
             className="cursor-pointer lg:w-[138px] lg:h-[22px] w-[110px] h-[18px] "
             onClick={() => navigate("/")}
           />
-          <div className="flex gap-7">
+          <div className=" gap-7 hidden">
             {menuItems.map((item, index) => (
               <div
                 key={index}

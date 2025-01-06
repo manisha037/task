@@ -38,14 +38,14 @@ const Card = ({
           )}
         </h3>
         <div className="flex flex-col gap-[33.88px] w-[282.35px] h-[197.71px]">
-        <p className="xl:text-[19.76px] sm:text-[16px]  text-[23px] font-geologica text-[#1B2559] font-medium ">
+      <div className="h-[50.82px]"> <p className="xl:text-[19.76px] sm:text-[16px]  text-[23px] font-geologica text-[#1B2559] font-medium ">
           {mainheading}
         </p>
       
-      <p className="xl:text-[15.53px] text-[21px] sm:text-[12px] xl:leading-[22.59px] sm:leading-[17px] leading-[28px] text-[#1B2559CC] ">
+     </div> <p className="xl:text-[15.53px] text-[21px] sm:text-[12px] xl:leading-[22.59px] sm:leading-[17px] leading-[28px] text-[#1B2559CC] ">
         {" "}
         {subheading}
-      </p>
+      </p> 
       </div>
     </div>
 
