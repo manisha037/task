@@ -1,3 +1,5 @@
+import tailwindScrollbarHide from 'tailwind-scrollbar-hide';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,11 +7,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend:  {
+    extend: {
       boxShadow: {
         'custom': '0px 8px 13.81px -2.76px #FFD1C866, 0px 2px 13.81px -2.76px #4318FF1A ',
       },
-      plugins: [require('tailwind-scrollbar-hide')],
       colors: {
         primary: '#FFF7EE',
         overlay: 'rgba(255, 247, 238, 0.8)',
@@ -26,15 +27,13 @@ export default {
       },
       fontWeight: {
         thin: '200',
-        ethin:'100' // Tailwind default class for 200 weight is 'font-thin'
+        ethin: '100',
       },
       fontFamily: {
-        sans: ['"Nunito Sans"', 'sans-serif'], // Set Nunito Sans as the default font family
-        geologica: ['"Geologica"', 'sans-serif'], // Import other fonts like Geologica
+        sans: ['"Nunito Sans"', 'sans-serif'],
+        geologica: ['"Geologica"', 'sans-serif'],
       },
     },
   },
-
-  
-  plugins: [],
-}
+  plugins: [tailwindScrollbarHide],
+};
